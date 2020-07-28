@@ -32,7 +32,7 @@ There will be two arrays of data for the automaton. One of them holds the data
 that the user currently sees on the canvas. The other one is where the _next_
 frame to be shown is being actively constructed.
 
-After the new frame is constructed, the next from becomes the current frame, and
+After the new frame is constructed, the next frame becomes the current frame, and
 the current frame becomes the next frame. And the process repeats.
 
 Also note that this approach is vaguely reminiscent of the Model and View in the
