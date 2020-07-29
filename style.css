@@ -3,7 +3,78 @@ body {
     background: black;
 }
 
+#main-container {
+    display: flex;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #canvas {
-    margin: 50px 350px;
+    margin: 25px 50px;
     background: white;
+}
+
+#range-container {
+    color: white;
+    padding: 0 15em;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 3em;
+}
+
+.controls {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    width: 5em;
+    height: 3em;
+    border-radius: 10px;
+}
+
+#play {
+    color: white;
+    background-color: green;
+}
+
+#step {
+    color: white;
+    background-color: blue;
+}
+
+#pause {
+    background-color: yellow;
+}
+
+#stop {
+    color: white;
+    background-color: red;
+}
+
+.preset-container {
+    margin-left: 3em;
+    justify-content: space-around;
+}
+
+.preset {
+    display: flex;
+    border: 2px solid white;
+}
+
+.indicator {
+    background-color: red;
+    width: 5em;
+    height: 5em;
+}
+
+#rules-container {
+    color:white;
+    padding: 0 3em 0 5em;
 }
