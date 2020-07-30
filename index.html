@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta ="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Life</title>
     <link rel = "stylesheet" href = "style.css">
 </head>
@@ -22,25 +22,24 @@
                     <button id = "pause" class = "controls">Pause</button>
                     <button id = "stop" class = "controls">Stop</button>
                 </div>
-            <script src = "index.js"></script>
             </div>
         </section>
         <section class = "section-container preset-container">
-            <div class = "preset">
-                <div class = "indicator"></div>
-                <button>Preset 1</button>
+            <div id = "preset-1" class = "preset">
+                <div id = "one" class = "indicator"></div>
+                <button id="brain">Preset 1</button>
             </div>
-            <div class = "preset">
-                <div class = "indicator"></div>
-                <button>Preset 2</button>
+            <div id = "preset-2" class = "preset">
+                <div id = "two" class = "indicator"></div>
+                <button id="dragon">Preset 2</button>
             </div>
-            <div class = "preset">
-                <div class = "indicator"></div>
-                <button>Preset 3</button>
+            <div id = "preset-3" class = "preset">
+                <div id="three" class = "indicator"></div>
+                <button id = "heart">Preset 3</button>
             </div>
-            <div class = "preset">
-                <div class = "indicator"></div>
-                <button>Preset 4</button>
+            <div id = "preset-4" class = "preset">
+                <div id = "four" class = "indicator"></div>
+                <button id = "pulsar">Preset 4</button>
             </div>
         </section>
         <section class = "section-container">
@@ -62,6 +61,7 @@
                 <p>The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick. Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations. </p>
             </div>
         </section>
-    </div>
+    </div>            
+    <script src = "index.js"></script>
 </body>
 </html>
