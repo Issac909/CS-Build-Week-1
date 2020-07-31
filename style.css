@@ -21,7 +21,10 @@ body {
 
 #range-container {
     color: white;
-    padding: 0 15em;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 #buttons {

@@ -5,7 +5,7 @@ const context = canvas.getContext("2d");
 // size is used to determine how large the canvas will be, along as set the boundaries that the animation will take into account
 const size = 600;
 // scale is the size of each individual cell
-const scale = 8;
+let scale = 8;
 // setting up the max (highest numbered position in the rowsay[x][y])
 const resolution = size / scale;
 // an array that will hold the set up for our rows and columns[x][y]
@@ -15,7 +15,12 @@ let speed = 500
 // display speed value
 let speed_value = document.getElementById("speed_value");
 speed_value.innerHTML = speed
+
+let zoom_value = document.getElementById("zoom-value");
+zoom_value.innerHTML = scale
 // creating variables for buttons
+const zoom_in = document.getElementById("zoom-in")
+const zoom_out = document.getElementById("zoom-out")
 const slower = document.getElementById("slower");
 const faster = document.getElementById("faster");
 
@@ -38,6 +43,20 @@ canvas.height = size;
 let interval = setInterval(step, speed)
 
 // attaching functions to buttons
+zoom_in.addEventListener("click", function() {
+    if (scale < 15) {
+        new_scale = scale += 1
+        zoom_value.innerHTML = new_scale
+    } 
+});
+
+zoom_out.addEventListener("click", function() {
+    if (scale > 3) {
+        scale -= 1
+        zoom_value.innerHTML = scale
+    } 
+})
+
 slower.addEventListener("click", function() {
     if (speed <= 1000 && speed >= 0) {
         new_speed = speed += 100
@@ -307,7 +326,7 @@ function fillGrid(locations, start) {
         let y = start.y + locations[i][1];
         cells[x][y].value = 1;
     }
-     drawCells();
+
 }
 
 function renderPattern() {
